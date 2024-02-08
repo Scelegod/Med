@@ -9,17 +9,17 @@
 }
 
 
-/* .slider__main::-webkit-scrollbar {
-    width: 0;
-  } */
 .slider__main__content{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     
     margin: auto 1em;
+    border-top: 1px solid #4cf9ff66;
     border-radius: 1.5em;
-    background-color: grey;
+    background-color: white;
+    filter: drop-shadow(0px 10px 5px #4cf9ff66);
     width: 18em;
     height: 19em;
     z-index: 1;
@@ -29,6 +29,7 @@
     margin: 0.7em auto;
     font-weight: 700;
     font-size: 1.5em;
+    text-align: center;
 }
 
 .main__content__img{
@@ -40,13 +41,17 @@
     -webkit-user-select: none;
     user-select: none;
     pointer-events: none;
-    width: 20.5em;
-    height: 18em;
 }
 
 .content__img{
-    width: 18em;
-    height: 15em;
+    width: 16em;
+    height: 16em;
+    border-radius: 15px;
+}
+
+.auto__img{
+    width: auto;
+    height: auto;
 }
 
 .record__img{
@@ -67,17 +72,19 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 8em;
+    margin: 1em 8em;
 }
 .main__slider{
     display: flex;
     overflow: hidden;
+    padding: 1em 0;
+
 }
 .slider1{
-    border: 1px solid grey;
     height: 19em;
     display: flex;
     transition: transform .3s ease-out;
+
 }
 
 /* Меняем курсор при захвате */
@@ -88,4 +95,5 @@
 
 .slider1__item{
     min-width: 17.5em;
+    margin: 0.1em;
 }

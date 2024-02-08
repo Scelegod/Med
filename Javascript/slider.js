@@ -15,8 +15,8 @@ function debounce(func, ms) {
   
   class Slider {
     
-    #arrowBtnLeft = document.querySelectorAll("slider__Arrow")[0];
-    #arrowBtnRight = document.querySelectorAll("slider__Arrow")[1];
+    #arrowBtnLeft = document.querySelectorAll(".slider__Arrow")[0];
+    #arrowBtnRight = document.querySelectorAll(".slider__Arrow")[1];
     // Cлайдер
     #slider = document.querySelector(".slider1");
     // Элементы слайдера
@@ -97,6 +97,14 @@ function debounce(func, ms) {
       );
       window.addEventListener("resize", this.#onWindowResize);
       
+      this.#arrowBtnRight.addEventListener(
+        "click",
+        debounce(this.#onRightBtnClick, 300)
+      );
+      this.#arrowBtnLeft.addEventListener(
+        "click",
+        debounce(this.#onLeftBtnClick, 300)
+      );
   
       //События для прокрутки слайдера
       this.#slider.addEventListener("touchstart", this.#touchStart);
