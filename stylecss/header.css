@@ -13,17 +13,17 @@ body{
 
 .header{
     background-color: white;
-    height: 4em;
+    height: 4.5em;
     width: 100%;
     margin-bottom: 2em;
     border-bottom: 0.1em solid gray;
 }
 
 .header__menu{
-    display: flex;    
+    display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-
     height: 4em;
     margin: auto 4em;
     

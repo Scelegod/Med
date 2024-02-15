@@ -1,0 +1,38 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    background-color: aquamarine;
+    height: 100%;
+}
+
+.main__body{
+    padding: 1em 4em;
+    width: 65%;
+}
+
+.body__content{
+    display: flex;
+    flex-direction: column;
+
+    margin: 1em;
+    height: 80%;
+
+    filter: drop-shadow(0px 10px 25px #e00101da);
+
+    background-color: rgb(0, 128, 128);
+}
+
+.body__content__title{
+    padding: 1em 2em;
+    font-weight: 700;
+    font-size: 1.4em;
+}
+
+.body__content__note{
+    background-color: grey;
+    padding: 1em;
+    font-size: 1.1em;
+    font-weight: 500;
+}

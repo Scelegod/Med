@@ -1,0 +1,38 @@
+.leftbar{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+    background-color: gainsboro;
+    width: 20%;
+
+    filter: drop-shadow(0px 5px 15px #3f3f3f2b);
+
+}
+
+.leftbar__menu{
+    display: flex;
+    flex-direction: column;    
+    margin: 2em 0 0 0 ;
+    gap: 1em;
+}
+
+.leftbar__menu__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    gap: 2em;
+    height: 2em;
+
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.leftbar__menu__content__img{
+    height: 1.5em;
+    width: 1.5em;
+}
+
