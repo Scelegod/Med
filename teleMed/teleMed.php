@@ -1,3 +1,7 @@
+<?php
+// include "./php/outputPost.php"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,10 +48,48 @@
             </div>
             <div class="body__content">
                 <div class="body__content__title">Плановая запись</div>
+                <div class="content__post">
+                <?php
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "test";
+                    
+                    $link = mysqli_connect($servername, $username, $password, $dbname);
+                    
+                    // Check connection
+                    if (!$link) {
+                        echo 'Не могу соединиться с БД. Код ошибки: ' . mysqli_connect_errno() . ', ошибка: ' . mysqli_connect_error();
+                        exit;
+                    } 
+                    
+                    
+                    $sql = "SELECT * FROM Post";
+                    if($result = $link->query($sql)){
+                        foreach($result as $row){
+                            echo '<div class="content__post__box">';
+                            echo          '<div class="post__box__title">' . $row["PostValue"] . '</div>';
+                            echo          '<img class="post__box__img" src="./../Img/arrow.png" alt="link">';
+                            echo      '</div>';
+                        }
+                        $result->free();
+                    } else{
+                        echo "Ошибка: " . $link->error;
+                    }
+                    $link->close();
+                    ?>
+                    <!-- <div class="content__post__box">
+                        <p class="post__box__title">sdfsdf</p>
+                        <img src="./../Img/arrow.png" alt="arrow" class="post__box__img">
+                    </div>
+                    <div class="content__post__box">
+                        <p class="post__box__title"></p>
+                        <img src="./../Img/arrow.png" alt="arrow" class="post__box__img">
+                    </div> -->
+                </div>
             </div>
         </div>
         <div class="rightbar">
-
         </div>
     </div>
 </body>
