@@ -3,14 +3,16 @@
     flex-direction: row;
     justify-content: space-between;
     margin-left: 19em;
+    height: 100%;
     
     background-color: aquamarine;
 }
 
 .main__body{
+    display: none;
     padding: 1em 3em;
     width: auto;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     gap: 2em;
 }
@@ -104,8 +106,3 @@
     height: 1em;
 }
 
-.rightbar{
-    width: 40%;
-    background-color: rgb(255, 140, 0);
-
-}

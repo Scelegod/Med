@@ -6,7 +6,7 @@
     
 }
 
-body{
+html, body{
     color: #113042;
-    height: 100em;
+    height: 100%;
 }
