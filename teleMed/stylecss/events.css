@@ -1,5 +1,6 @@
 .events__body{
-    background-color: rgb(195, 195, 195);
+    display: none;
+    background-color: white;
     padding: 1em 3em;
     width: 100%;
     min-height: 100%;

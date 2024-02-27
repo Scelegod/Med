@@ -8,23 +8,24 @@
     <link rel="stylesheet" href="./stylecss/mainBody.css">
     <link rel="stylesheet" href="./stylecss/rightbar.css">
     <link rel="stylesheet" href="./stylecss/events.css">
+    <link rel="stylesheet" href="./stylecss/cabinet.css">
     <title>ТелеМед</title>
 </head>
 <body>
     <div class="leftbar">
         <div class="leftbar__title"><div class="header__content__title__color">Теле</div>Медецина</div>
         <div class="leftbar__menu">
-            <div class="leftbar__menu__content">
+            <div class="leftbar__menu__content tabik active__tabik">
                 <img src="./img/pharmacy.png" alt="pharmacy" class="leftbar__menu__content__img">
                 <!-- https://www.flaticon.com/free-icon/pharmacy_2695914?term=pharmacy&page=1&position=71&origin=search&related_id=2695914 -->
                 <div class="leftbar__menu__content__title">Записаться</div>
             </div>
-            <div class="leftbar__menu__content">
+            <div class="leftbar__menu__content tabik">
                 <img src="./img/calendar.png" alt="calendar" class="leftbar__menu__content__img">
                 <div class="leftbar__menu__content__title">События</div>
                 <!-- https://www.flaticon.com/free-icon/calendar_1581943?term=events&page=1&position=53&origin=search&related_id=1581943 -->
             </div>
-            <div class="leftbar__menu__content">
+            <div class="leftbar__menu__content tabik">
                 <img src="./img/option.png" alt="option" class="leftbar__menu__content__img">
                 <div class="leftbar__menu__content__title">Мой кабинет</div>
                 <!-- https://www.flaticon.com/free-icon/option_4626734 -->
@@ -32,7 +33,7 @@
         </div>
     </div>
     <div class="main">
-        <div class="main__body">
+        <div class="main__body body__tabs actived">
             <div class="main__info">
                 <img src="../Img/user.png" alt="user" class="main__info__user__img">
                 <div class="main__info__user">
@@ -86,7 +87,7 @@
                 </div>
             </div>
         </div>
-        <div class="events__body">
+        <div class="events__body body__tabs">
             <div class="event__body__tabs">
                 <div class="tabs__future active__tabs tab">
                     <div class="tabs__future__title">Будущие</div>
@@ -126,9 +127,43 @@
                 </div>
             </div>
         </div>
+        <div class="cabinet__body body__tabs">
+            <div class="cabinet__body__title">Аккаунт</div>
+            <div class="cabinet__content">
+                <div class="cabinet__content__li">
+                    <div class="li_box">
+                        <img src="./img/cabinet.png" alt="cabinet" class="li_box__img">
+                        <div class="li__box__title">Управление пациентами</div>
+                    </div>
+                    <img src="./../Img/arrow.png" alt="arrow" class="content__li__img">
+                </div>
+                <div class="cabinet__content__li">
+                    <div class="li_box">
+                        <img src="./img/notification.png" alt="cabinet" class="li_box__img">
+                        <div class="li__box__title">Общие настройки</div>
+                    </div>
+                    <img src="./../Img/arrow.png" alt="arrow" class="content__li__img">
+                </div>
+                <div class="cabinet__content__li">
+                    <div class="li_box">
+                        <img src="./img/doc.png" alt="cabinet" class="li_box__img">
+                        <div class="li__box__title">Документы</div>
+                    </div>
+                    <img src="./../Img/arrow.png" alt="arrow" class="content__li__img">
+                </div>
+                <div class="cabinet__content__li">
+                    <div class="li_box">
+                        <img src="./img/exit.png" alt="cabinet" class="li_box__img">
+                        <div class="li__box__title">Выйти</div>
+                    </div>
+                    <img src="./../Img/arrow.png" alt="arrow" class="content__li__img">
+                </div>
+            </div>
+        </div>
         <div class="rightbar">
         </div>
     </div>
-    <script src="./js/tabs.js"></script>
+    <script src="./js/eventTabs.js"></script>
+    <script src="./js/leftbarTabs.js"></script>
 </body>
 </html>
