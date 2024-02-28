@@ -1,0 +1,69 @@
+.page__doctors{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* background-color: aqua; */
+}
+
+.page__block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.page__block__img{
+    rotate: 180deg;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.page__block__title{
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.page__selection{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1.5em;
+    width: 100%;
+    /* background-color: aqua; */
+}
+
+.selection__doctors, .selection__med, .selection__post{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.selection__doctors__note, .selection__med__note, .selection__post__note{
+    color: #c3cfd6;
+    font-size: 0.9em;
+}
+
+.selection__doctors__inp, .selection__med__inp, .selection__post__inp{
+    padding-left: 1em;
+    font-size: 1em;
+    height: 3em;
+
+    border: 1px solid #c3cfd6;
+    border-radius: 3px;
+}
+
+.selection__med__post{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    width: 100%;
+}
+
+.selection__med{
+    width: 60%;    
+}
+
+.selection__post{
+    width: 40%;
+}

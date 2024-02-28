@@ -11,8 +11,13 @@
 .main__body{
     display: none;
     padding: 1em 3em;
-    width: auto;
-    /* display: flex; */
+    width: 100%;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.main__page{
+    display: none;
     flex-direction: column;
     gap: 2em;
 }

@@ -30,6 +30,10 @@
     padding: 0.6em 0.8em;
 }
 
+.cabinet__content__li:hover{
+    background-color: rgb(240, 240, 240);
+}
+
 .li_box{
     display: flex;
     flex-direction: row;
