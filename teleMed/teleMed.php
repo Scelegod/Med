@@ -51,7 +51,7 @@
                 <div class="body__content">
                     <div class="body__content__title">Плановая запись</div>
                     <div class="content__post">
-                    <!-- <?php
+                    <?php
                         $servername = "localhost";
                         $username = "root";
                         $password = "";
@@ -79,7 +79,7 @@
                             echo "Ошибка: " . $link->error;
                         }
                         $link->close();
-                        ?> -->
+                        ?>
                         <!-- <div class="content__post__box">
                             <p class="post__box__title">sdfsdf</p>
                             <img src="./../Img/arrow.png" alt="arrow" class="post__box__img">
@@ -112,13 +112,61 @@
                         <div class="selection__med">
                             <div class="selection__med__note">Название клиники</div>
                             <select class="selection__med__inp">
-                                <option selected>Все клиники</option>
+                                <option class="med__option" selected>Все клиники</option>
+                            <?php 
+                             $servername = "localhost";
+                             $username = "root";
+                             $password = "";
+                             $dbname = "test";
+     
+                             $link = mysqli_connect($servername, $username, $password, $dbname);
+                            if (!$link) {
+                                echo 'Не могу соединиться с БД. Код ошибки: ' . mysqli_connect_errno() . ', ошибка: ' . mysqli_connect_error();
+                                exit;
+                            } 
+    
+    
+                            $sql = "SELECT * FROM med";
+                            if($result = $link->query($sql)){
+                                foreach($result as $row){
+                                    echo          '<option class="med__option">' . $row["MedName"] . $row["MedId"] . '</option>';
+                                }
+                                $result->free();
+                            } else{
+                                echo "Ошибка: " . $link->error;
+                            }
+                            $link->close();
+                            ?>
                             </select>
                         </div>
                         <div class="selection__post">
                             <div class="selection__post__note">Специальность</div>
                             <select class="selection__post__inp">
-                                <option>sdfggdsf</option>
+                                <option class="post__option"></option>
+                                <?php 
+                             $servername = "localhost";
+                             $username = "root";
+                             $password = "";
+                             $dbname = "test";
+     
+                             $link = mysqli_connect($servername, $username, $password, $dbname);
+                            if (!$link) {
+                                echo 'Не могу соединиться с БД. Код ошибки: ' . mysqli_connect_errno() . ', ошибка: ' . mysqli_connect_error();
+                                exit;
+                            } 
+    
+    
+                            $sql = "SELECT * FROM Post";
+                            if($result = $link->query($sql)){
+                                foreach($result as $row){
+                                    echo          '<option class="post__option">' . $row["PostValue"] . $row["PostId"] . '</option>';
+                                }
+                                $result->free();
+                            } else{
+                                echo "Ошибка: " . $link->error;
+                            }
+                            $link->close();
+                            ?>
                             </select>
                         </div>
                     </div>
