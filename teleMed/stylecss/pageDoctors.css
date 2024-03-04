@@ -1,5 +1,5 @@
 .page__doctors{
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100%;
     /* background-color: aqua; */
@@ -11,6 +11,8 @@
     align-items: center;
     gap: 1em;
     margin-bottom: 1em;
+
+    cursor: pointer;
 }
 
 .page__block__img{
@@ -66,4 +68,9 @@
 
 .selection__post{
     width: 40%;
+}
+
+.doctor{
+    width: 100%;
+    background-color: aquamarine;
 }

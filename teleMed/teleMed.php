@@ -70,7 +70,7 @@
                         if($result = $link->query($sql)){
                             foreach($result as $row){
                                 echo '<div class="content__post__box">';
-                                echo          '<div class="post__box__title">' . $row["PostValue"] . '</div>';
+                                echo          '<div data-postid="' . $row["PostId"] . '" class="post__box__title">' . $row["PostValue"] . '</div>';
                                 echo          '<img class="post__box__img" src="./../Img/arrow.png" alt="link">';
                                 echo      '</div>';
                             }
@@ -142,7 +142,7 @@
                         <div class="selection__post">
                             <div class="selection__post__note">Специальность</div>
                             <select class="selection__post__inp">
-                                <option class="post__option"></option>
+                                <!-- <option class="post__option"></option> -->
                                 <?php 
                              $servername = "localhost";
                              $username = "root";
@@ -159,7 +159,7 @@
                             $sql = "SELECT * FROM Post";
                             if($result = $link->query($sql)){
                                 foreach($result as $row){
-                                    echo          '<option class="post__option">' . $row["PostValue"] . $row["PostId"] . '</option>';
+                                    echo          '<option data-postid="' . $row["PostId"] . '" class="post__option">' . $row["PostValue"] . '</option>';
                                 }
                                 $result->free();
                             } else{
@@ -170,6 +170,36 @@
                             </select>
                         </div>
                     </div>
+                </div>
+                <div class="doctors">
+                <?php 
+                             $servername = "localhost";
+                             $username = "root";
+                             $password = "";
+                             $dbname = "test";
+     
+                             $link = mysqli_connect($servername, $username, $password, $dbname);
+                            if (!$link) {
+                                echo 'Не могу соединиться с БД. Код ошибки: ' . mysqli_connect_errno() . ', ошибка: ' . mysqli_connect_error();
+                                exit;
+                            } 
+    
+                            
+                            $sql = "select Personal.PersonalId, Personal.Fio, Personal.PostTime, Med.MedName, Post.PostValue
+                            from (((Personal
+                            inner join MedPost on Personal.MedPostCode = MedPost.MedPostId)
+                            inner join Med on MedPost.MedCode = Med.MedId)
+                            inner join Post on MedPost.PostCode = Post.PostId);";
+                            if($result = $link->query($sql)){
+                                foreach($result as $row){
+                                    echo          '<div class="sdsad">'. $row["Fio"] . $row["PostTime"] . $row["MedName"] . $row["PostValue"] .'</div>';
+                                }
+                                $result->free();
+                            } else{
+                                echo "Ошибка: " . $link->error;
+                            }
+                            $link->close();
+                            ?>
                 </div>
             </div>
         </div>
@@ -265,5 +295,7 @@
     </div>
     <script src="./js/eventTabs.js"></script>
     <script src="./js/leftbarTabs.js"></script>
+    <script src="./js/pageTabs.js"></script>
+    <script src="./js/doctors.js"></script>
 </body>
 </html>

@@ -1,9 +1,6 @@
 let parent2 = document.querySelector('body');
 let links2  = parent2.querySelectorAll('.leftbar__menu .tabik');
 let tabs2   = parent2.querySelectorAll('.body__tabs');
-console.log(parent2);
-console.log(links2);
-console.log(tabs2);
 for (let i = 0; i < links2.length; i++) {
     links2[i].addEventListener('click', function(event) {
     let activeLink = parent2.querySelector('.leftbar__menu .active__tabik');
