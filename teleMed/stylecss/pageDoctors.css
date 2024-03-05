@@ -79,7 +79,7 @@
 }
 
 .doctors__block{
-    display: none;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
@@ -128,8 +128,4 @@
     padding: 0.5em 2em;
     color: white;
     font-weight: 600;
-}
-
-.doctors__active{
-    display: flex;
 }

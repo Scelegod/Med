@@ -204,7 +204,7 @@
                             if($result = $link->query($sql)){
                                 foreach($result as $row){
                                     // echo          '<div class="sdsad">'. $row["Fio"] . $row["PostTime"] . $row["MedName"] . $row["PostValue"] .'</div>';
-                                    echo          '<div data-persid="' . $row["PersonalId"] . '" class="doctors__block doctors__active">';
+                                    echo          '<div data-persid="' . $row["PersonalId"] . '" class="doctors__block">';
                                     echo          '<div class="block__info">';
                                     echo          '<img src="./img/cabinet.png" alt="photo" class="doctors__block__img">';
                                     echo          '<div class="doctors__block__info">';

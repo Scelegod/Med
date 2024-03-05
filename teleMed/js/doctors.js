@@ -5,7 +5,7 @@ let optionSelect = document.querySelector('.post__option');
 console.log(optionSelect.textContent);
 
 // if(op)
-let doctorsBlock = document.querySelectorAll('.doctors__active');
+let doctorsBlock = document.querySelectorAll('.doctors__block');
 let selectionPostInp = document.querySelector('.selection__post__inp');
 console.log(doctorsBlock)
 for (let elem of doctorsBlock){
@@ -16,7 +16,11 @@ for (let elem of doctorsBlock){
         selectionPostInp.addEventListener('change', function(){
             console.log(selectionPostInp.value);
             if(selectionPostInp.value != elem2.textContent){
-                elem.classList.remove('doctors__active')
+                // elem.classList.remove('doctors__active')
+                elem.style.display = 'none';
+            }else{
+                elem.style.display = 'flex';
+
             }
         });
         
