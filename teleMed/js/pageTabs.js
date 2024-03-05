@@ -9,11 +9,8 @@ for(let elemPost of postOption){
             pageDoctors.style.display = 'flex';
             mainPage.style.display = 'none';
             let elemTitle = elem.querySelector('.post__box__title');
-            console.log(elemTitle.dataset.postid);
             if(elemPost.dataset.postid == elemTitle.dataset.postid){
-                console.log(elemPost.selected);
                 elemPost.selected = true;
-                console.log(1);
             }
         });
     }

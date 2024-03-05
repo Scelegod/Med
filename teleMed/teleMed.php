@@ -172,6 +172,17 @@
                     </div>
                 </div>
                 <div class="doctors">
+                    <!-- <div class="doctors__block">
+                        <div class="block__info">
+                            <img src="./img/cabinet.png" alt="" class="doctors__block__img">
+                            <div class="doctors__block__info">
+                                <div class="doctors__name">asdsdsdasd</div>
+                                <div class="doctors__post">sdsdfsdf</div>
+                                <div class="doctors__med">sdfsdfsdf</div>
+                            </div>
+                        </div>
+                        <div class="doctors__btn">Записаться</div>
+                    </div> -->
                 <?php 
                              $servername = "localhost";
                              $username = "root";
@@ -192,7 +203,18 @@
                             inner join Post on MedPost.PostCode = Post.PostId);";
                             if($result = $link->query($sql)){
                                 foreach($result as $row){
-                                    echo          '<div class="sdsad">'. $row["Fio"] . $row["PostTime"] . $row["MedName"] . $row["PostValue"] .'</div>';
+                                    // echo          '<div class="sdsad">'. $row["Fio"] . $row["PostTime"] . $row["MedName"] . $row["PostValue"] .'</div>';
+                                    echo          '<div data-persid="' . $row["PersonalId"] . '" class="doctors__block doctors__active">';
+                                    echo          '<div class="block__info">';
+                                    echo          '<img src="./img/cabinet.png" alt="photo" class="doctors__block__img">';
+                                    echo          '<div class="doctors__block__info">';
+                                    echo          '<div class="doctors__name">' . $row["Fio"] . '</div>';
+                                    echo          '<div class="doctors__post">' . $row["PostValue"] . '</div>';
+                                    echo          '<div class="doctors__med">"' . $row["MedName"] . '"</div>';
+                                    echo          '</div>';
+                                    echo          '</div>';
+                                    echo          '<div class="doctors__btn">Записаться</div>';
+                                    echo          '</div>';
                                 }
                                 $result->free();
                             } else{
