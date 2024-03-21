@@ -112,7 +112,7 @@
                         <div class="selection__med">
                             <div class="selection__med__note">Название клиники</div>
                             <select class="selection__med__inp">
-                                <option class="med__option" selected>Все клиники</option>
+                                <!-- <option class="med__option" data-medid="" selected>Все клиники</option> -->
                             <?php 
                              $servername = "localhost";
                              $username = "root";
@@ -129,7 +129,7 @@
                             $sql = "SELECT * FROM med";
                             if($result = $link->query($sql)){
                                 foreach($result as $row){
-                                    echo          '<option class="med__option">' . $row["MedName"] . $row["MedId"] . '</option>';
+                                    echo          '<option class="med__option" data-medid="'. $row["MedId"] . '">' . $row["MedName"] . '</option>';
                                 }
                                 $result->free();
                             } else{
@@ -159,7 +159,7 @@
                             $sql = "SELECT * FROM Post";
                             if($result = $link->query($sql)){
                                 foreach($result as $row){
-                                    echo          '<option data-postid="' . $row["PostId"] . '" class="post__option">' . $row["PostValue"] . '</option>';
+                                    echo          '<option data-postselectid="' . $row["PostId"] . '" class="post__option">' . $row["PostValue"] . '</option>';
                                 }
                                 $result->free();
                             } else{
@@ -196,7 +196,7 @@
                             } 
     
                             
-                            $sql = "select Personal.PersonalId, Personal.Fio, Personal.PostTime, Med.MedName, Post.PostValue
+                            $sql = "select Personal.PersonalId, Personal.Fio, Personal.PostTime, Med.MedName, Post.PostValue, Post.PostId, Med.MedId
                             from (((Personal
                             inner join MedPost on Personal.MedPostCode = MedPost.MedPostId)
                             inner join Med on MedPost.MedCode = Med.MedId)
@@ -209,8 +209,8 @@
                                     echo          '<img src="./img/cabinet.png" alt="photo" class="doctors__block__img">';
                                     echo          '<div class="doctors__block__info">';
                                     echo          '<div class="doctors__name">' . $row["Fio"] . '</div>';
-                                    echo          '<div class="doctors__post">' . $row["PostValue"] . '</div>';
-                                    echo          '<div class="doctors__med">"' . $row["MedName"] . '"</div>';
+                                    echo          '<div data-postdocid="' . $row["PostId"] . '" class="doctors__post">' . $row["PostValue"] . '</div>';
+                                    echo          '<div data-medpersid="'. $row["MedId"] . '" class="doctors__med" data-med>"' . $row["MedName"] . '"</div>';
                                     echo          '</div>';
                                     echo          '</div>';
                                     echo          '<div class="doctors__btn">Записаться</div>';
@@ -317,7 +317,8 @@
     </div>
     <script src="./js/eventTabs.js"></script>
     <script src="./js/leftbarTabs.js"></script>
-    <script src="./js/pageTabs.js"></script>
+    <!-- <script src="./js/doctest.js"></script> -->
+    <!-- <script src="./js/pageTabs.js"></script> -->
     <script src="./js/doctors.js"></script>
 </body>
 </html>
