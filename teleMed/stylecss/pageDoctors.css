@@ -1,0 +1,145 @@
+.page__doctors{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 2em;
+    /* background-color: aqua; */
+}
+
+.page__block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+
+    cursor: pointer;
+}
+
+.page__block__img{
+    rotate: 180deg;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.page__block__title{
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.page__selection{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    /* margin-top: 1.5em; */
+    width: 100%;
+    /* background-color: aqua; */
+}
+
+.selection__doctors, .selection__med, .selection__post{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.selection__doctors__note, .selection__med__note, .selection__post__note{
+    color: #c3cfd6;
+    font-size: 0.9em;
+}
+
+.selection__doctors__inp, .selection__med__inp, .selection__post__inp{
+    padding-left: 1em;
+    font-size: 1em;
+    height: 3em;
+
+    border: 1px solid #c3cfd6;
+    border-radius: 3px;
+}
+
+.selection__med__post{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    width: 100%;
+}
+
+.selection__med{
+    width: 60%;    
+}
+
+.selection__post{
+    width: 40%;
+}
+
+.doctors{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    width: 100%;
+}
+
+.doctors__block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(33,110,186,.12);
+
+    padding: 1em;
+    width: 100%;
+}
+
+.block__info{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.doctors__block__img{
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.doctors__block__info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.doctors__name{
+    font-weight: 600;
+    font-size: 1.2em;
+}
+.doctors__name:hover{
+    cursor: pointer;
+    color: #1467c9;
+}
+
+.doctors__med__city, .doctors__med__adress, .doctors__med__posttime{
+    display: none;
+}
+.doctors__post{
+    font-size: 0.9em;
+    font-weight: 100;
+}
+
+.doctors__med{
+    color: #1467c9;
+}
+
+.doctors__btn{
+    background-color: #1467c9;
+    border-radius: 10px;
+    padding: 0.5em 2em;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+option.med__option{
+    display: none;
+}

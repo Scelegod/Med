@@ -1,0 +1,49 @@
+.rightbar{
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: white;
+}
+
+.rightbar__title{
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.rightbar__events{
+    margin: 1em 0;
+    padding: 1em;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(33,110,186,.12);
+    border-radius: 10px;
+}
+
+.events__block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    width: 100%;
+}
+
+.events__block__note{
+    color: #c3cfd6;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.block__record{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid blue;
+    padding: 5px;
+}
+
+.record__data{
+    margin: 0 10px;
+}

@@ -1,0 +1,206 @@
+.window{
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 21;
+
+    transform: translateY(-10%) scale(0);
+    transition: .3s ease-in-out;
+    background-color: transparent;
+}
+
+.window.active{
+    transform: translateY(0%) scale(100%);
+    background-color: rgba(0, 0, 0, 0.555);
+}
+
+.window__container{
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.window__body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 200px auto;
+    padding: 40px;
+
+    width: 900px;
+
+    border: 2px ;
+    background: #ffffff;
+    border-radius: 20px;
+
+    /* text-align: center; */
+
+    position: relative;
+}
+
+.body__column{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    height: 375px;
+    min-width: 100%;
+}
+
+.column__left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 13em;
+}
+
+
+
+.doctors__img{
+    width: 11.5em;
+    height: 11.5em;
+}
+
+.slot{
+    color: #11b69a;
+    font-weight: 300;
+}
+
+.tools{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    min-width: 100%;
+}
+
+.tools__text{
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    margin-right: 3em;
+}
+.tools__communication{
+    display: flex;
+    gap: 1em;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.communication__phone{
+    width: 1.8em;
+    height: 1.6em;
+}
+
+.communication__chat{
+    width: 2em;
+    height: 2em;
+}
+
+.communication__camera{
+    width: 1.8em;
+    height: 1.6em;
+}
+
+.column__right{
+    display: flex;
+    flex-direction: column;    
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 588px;
+}
+
+.doctor__name{
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.doctor__med{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.doctor__med__adress{
+    color: #96a9b3;
+}
+
+.doctor__med__name{
+    font-size: 1.1em;
+    font-weight: 400;
+}
+.doctor__post, .doctor__post__time, .doctor__work{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+.post__img{
+    width: 2.3em;
+    height: 2.3em;
+}
+
+.post__title, .work__title{
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.doctor__post__time{
+    background-color: hsla(0, 0%, 92.2%, .67059);
+    border-radius: 7px;
+    padding-right: 0.3em;
+}
+
+.post__time{
+    background-color: #cde1e9;
+    border-radius: 7px;
+    color: #365abd;
+    font-weight: 600;
+    padding: 0.3em;
+}
+
+.post__name{
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.doctor__work__img{
+    width: 2.3em;
+    height: 2.3em;
+}
+
+.doctor__work__med{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: hsla(0, 0%, 92.2%, .67059);
+    border-radius: 7px;
+    padding: 0.3em;
+}
+
+.doctor__city{
+    color: #96a9b3;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.window__close{
+    position: absolute;
+    left: 840px;
+    top: 10px;
+    padding: 0.2em 0.5em ;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: #eef4fd;
+}
+
+
+.window__close:hover{
+    cursor: pointer;
+}

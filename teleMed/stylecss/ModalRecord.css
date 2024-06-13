@@ -1,0 +1,608 @@
+/* ------------------ModalRecord----------------------------- */
+.modalRecord{
+    position: fixed;
+    width: 1000px;
+    top: 15%;
+    left: calc(50% - 500px);
+    background: linear-gradient(135deg,#ffffff,#feffff);
+    border-radius: 10px;
+    padding: 40px;
+    z-index: -1;  
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.modalRecord.active{
+    z-index: 15;
+    opacity: 1;
+}
+
+.modalRecord__content{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.modalRecord__content__row.left{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    min-width: 300px;
+}
+
+.modalRecord__content__row.right{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    position: relative;
+}
+
+.modalRecord__title{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+.modalRecord__note, .modalRecord__note{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 16px;
+}
+/* -----------------Календарь---------------------------- */
+.calendar {
+    width: 100%;
+}
+#month {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    list-style: none;
+    /* width: 200px; */
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+.monthAndYears {
+    display: flex;
+    flex-direction: column;
+}
+#month li {
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    list-style: none;
+}
+
+.monthText{
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.yearText {
+    padding: 0;
+    font-size: 16px;
+}
+
+#days {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    flex-wrap: wrap;
+    /* width: 100%; */
+    align-content: flex-start;
+    margin: 0;
+    /* padding: 1rem 0; */
+    justify-content: left;
+}
+#days li {
+    height: 42px;
+    /* width: 32px; */
+    padding-top: 10px;
+    /* display: inline-block; */
+    list-style: none;
+    flex: 0 0 calc(100% / 7);
+    text-align: center;
+}
+.date-now {
+    color: #11304260;
+    /* font-weight: 700; */
+}
+.date-now:hover{
+    border-radius: 40px;
+    border: 1px solid #11304260;
+}
+.date-rec{
+    color: black;
+    border-radius: 50%;
+}
+.date-rec.active{
+    color: white;
+    border-radius: 50%;
+    background-color: #0166ae;
+}
+
+.date-rec:hover{
+    border-radius: 50%;
+    border: 1px solid #11304260;
+}
+#weekdays {
+    margin: 0;
+    /* padding: 1rem 0; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+}
+#weekdays li {
+    display: inline-block;
+    flex: 0 0 calc(100% / 7);
+    text-align: center;
+    background-color: #ffffff;
+    color: #1787d5;
+}
+/* --------------------------------------------- */
+.time__tab{
+    display: none;
+}
+
+/* .time__tab2{
+    display: none;
+}
+ */
+.time__tab.active{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.time__rec{
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    width: calc(25% - 8px);
+    padding: 9px 0 7px;
+
+}
+
+.time__rec:hover{
+    cursor: pointer;
+}
+
+/* .time__rec.active{ */
+    /* border-radius: 50px; */
+    /* font-weight: 500; */
+    /* background-color: #ffffff; */
+    /* color: black; */
+/* } */
+
+.time__rec.active{
+    color: white;
+    border-radius: 50%;
+    background-color: #0166ae;
+}
+.day{
+    color: white;
+    border-radius: 50%;
+    background-color: #48a5e7;
+}
+.doctor__description{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.doctor__img{
+    width: 64px;
+    height: 64px;
+}
+
+.doctor__title{
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor__nameRec{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 4px;
+}
+
+.doctor__post__text{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+.doctor__med__text{
+    font-size: 14px;
+    line-height: 16px;
+    color: #96a9b3;
+}
+
+.textarea{
+    width: 100%;
+}
+
+.description__problems{
+    display: block;
+    font-weight: 600;
+    font-size: 18px !important;
+    line-height: 20px !important;
+    margin-bottom: 8px !important;
+}
+
+.description__problems__textarea{
+    font-family: inherit;
+    width: 100%;
+    height: 130px;
+    border: 1px solid #e5e5e5;
+    resize: none;
+    font-size: 16px;
+    line-height: 18px;
+    color: #3a3a3a;
+    padding: 15px 10px;
+    border-radius: 5px;
+}
+
+.header__file{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-file{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.attach__img{
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+.file__input{
+    display: none;
+}
+
+.pacient__description{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.patient__title{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.patient__info{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.pacient__img{
+    height: 40px;
+    width: 40px;
+}
+
+.patient__name{
+    line-height: 16px;
+    margin-bottom: 4px;
+    font-weight: 400;
+}
+
+.patient__snils{
+    color: #96a9b3;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.connections{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.connections__title{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.connections__types{
+    display: flex;
+    align-items: center;
+}
+
+.connections__types__item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 20px rgba(33, 110, 186, .12);
+    border-radius: 8px;
+    padding: 11px 22px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.connections__types__item.active{
+    background-color: #1467c9;
+}
+
+.connections__types__img{
+    height: 20px;
+    width: 20px;
+}
+
+.item__title{
+    font-size: 18px;
+}
+
+.item__title.active{
+    font-size: 18px;
+    color: white;
+}
+
+.document__reviev{
+    max-width: 360px;
+}
+
+.check{
+    display: flex;
+    align-items: center;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.check__title{
+    color: #c3cfd6;
+}
+
+.checkbox label{
+    color: #2c2c2c;
+    font-size: 14px;
+    user-select: none;
+    transition: all .2s ease-in-out;
+}
+
+.checkbox label::before{
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    position: absolute;
+    left: 6px;
+    top: 7px;
+    content: "";
+    display: block;
+    height: 10px;
+    width: 14px;
+    background-color: #fff;
+    transition: all .4s ease-in-out;
+}
+
+.check__title{
+    margin-left: 10px;
+    margin-top: 4px;
+    color: #c3cfd6;
+}
+
+.check__title a{
+    color: #365abd;
+    font-size: 18px;
+}
+
+.fixe__button{
+    flex-direction: row;
+    bottom: 0;
+    right: 0;
+}
+
+.modalRecord__btn{
+    position: absolute;
+    right: 0;
+    width: 200px;
+    background-color: #1467c9;
+    /* width: 100%; */
+    line-height: 42px;
+    height: 42px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 8px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    border: none;
+}
+
+
+
+.close__modalRecord{
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+
+/* Успешная запись */
+.modalChat{
+    position: fixed;
+    width: 600px;
+    top: 15%;
+    left: calc(50% - 320px);
+    background: linear-gradient(135deg,#1467c9,#1787d5);
+    border-radius: 10px;
+    padding: 25px;
+    z-index: -1;  
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.modalChat.active{
+    z-index: 15;
+    opacity: 1;
+}
+
+.modalChat__body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* margin-bottom: 16px; */
+    background-color: #dfdfdf;
+    border-radius: 10px;
+    /* padding: 10px; */
+    overflow-y: hidden;
+    height: 100%;
+}
+
+.modalChat__title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(135deg, #1467c9, #1787d5);
+
+    /* background-color: ; */
+    /* border-radius: 8px 8px 0 0; */
+    padding-left: 5px;
+}
+
+.modalChat__img{
+    width: 40px;
+    height: 40px;
+}
+
+.close__modalChat{
+    position: absolute;
+    display: inline-block;
+    right: 8px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modalChat__who{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    height: 60px;
+    padding-left: 10px;
+}
+
+.modalChat__docName, .modalChat__docPost{
+    padding: 5px;
+}
+
+.modalChat__UsName{
+    padding: 5px;
+    font-size: 20px;
+}
+.modalChat__docPost{
+    font-size: 16px;
+    color: #96a9b3;
+}
+
+.modalChat__note{
+    overflow-y: auto;
+    padding: 10px 20px;
+    max-height: 500px;
+    min-height: 500px;
+}
+.modalChat__note::-webkit-scrollbar { width: 0; }
+
+.message, .message2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+    width: auto;
+    font-size: 18px;
+}
+
+.message .text, .message2 .text{
+    background-color: #fff;
+    z-index: 5;
+    align-self: flex-start;
+    /* border: 1px solid; */
+    border-radius: 5px;
+    padding: 5px;
+    word-break: break-word;
+    box-shadow:0 4px 20px rgba(33,110,186,.12);
+
+}
+
+.message2 .figure, .message .figure{
+    position: absolute;
+    right: -10px;
+    border-radius: 5px;
+    bottom: 0;
+    background-color: #fff;
+    width: 30px;
+    height: 15px;
+}
+.message .figure{
+    left: -10px;
+
+}
+.message2 .text{
+    align-self: flex-end;
+
+}
+
+.modalChat__input{
+    width: 100%;
+    background: rgb(255, 255, 255);
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    border-radius: 5px 0 0;
+    font-size: 18px;
+    outline: none;
+    display: inline-block;
+    white-space: normal;
+    resize: none;
+
+    padding: 10px 0 10px 25px;
+    margin-right: 50px;
+}
+
+.modalChat__input::-webkit-scrollbar { width: 0; }
+
+.modalChat__btn{
+    background: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    width: 50px;
+    height: 64px;
+    /* background-color: #0166ae00; */
+    border-radius: 0 5px 0 0;
+}
+
+.dispnone{
+    display: none;
+}

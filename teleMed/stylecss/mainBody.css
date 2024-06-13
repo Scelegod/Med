@@ -1,0 +1,123 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 19em;
+    height: 100%;
+    
+    background-color: white;
+}
+
+.main__body{
+    display: none;
+    padding: 1em 3em;
+    width: 100%;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.main__page{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.main__info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 1em;
+    padding: 0 1em;
+    height: 3.5em;
+
+    background: linear-gradient(135deg,#0166ae,#1787d5);
+    box-shadow: 0 4px 20px rgba(33,110,186,.12);
+    border-radius: 8px;
+}
+
+.main__info__user__btn{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.main__info__user__btn:hover{
+    background-color: #015ea0;
+}
+.main__info__user__img{
+    height: 2em;
+    width: 2em;    
+}
+
+.main__info__user{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1em;
+
+    color: white;
+}
+
+.main__info__user__name{
+    font-weight: 600;
+}
+
+.main__info__user__snils{
+    font-weight: 500;
+}
+.body__content{
+    display: flex;
+    flex-direction: column;
+
+    height: 80%;
+}
+
+.body__content__title{
+    font-weight: 700;
+    font-size: 1.4em;
+}
+
+.body__content__note{
+    border-left: 0.3em solid #1467c9;
+    border-radius: 0 8px 8px 0;
+    background-color: #f3f4f5;
+    padding: 1em;
+    
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #113042;
+}
+
+.content__post{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    margin-top: 1em;
+}
+
+.content__post__box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border-radius: 15px;
+    padding: 1em;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(33,110,186,.12);
+}
+
+.content__post__box:hover{
+    background-color: rgb(218, 218, 218);
+}
+
+.post__box__title{
+    font-weight: 700;
+}
+
+.post__box__img{
+    width: 1em;
+    height: 1em;
+}
+

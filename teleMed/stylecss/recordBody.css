@@ -1,0 +1,82 @@
+.record__body{
+    display: none;
+    background-color: white;
+    padding: 1em 3em;
+    width: 100%;
+    min-height: 100%;
+}
+
+.record__body__block{
+    position: relative;
+    box-shadow: 0 4px 20px rgba(33, 110, 186, .12);
+    background-color: white;
+    border-radius: 15px;
+    color: #4b616d;
+    width: 100%;
+    height: 35em;
+    padding: 2em;
+    overflow-x: auto;
+}
+
+.primal__tr{
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #1467c9;
+}
+
+.primal__tr td{
+    color: white;
+    padding: 5px;
+}
+.primal__tr td:first-child{
+    border-radius: 10px 0 0 0;
+}
+
+.primal__tr td:last-child{
+    border-radius:  0 10px 0 0;
+}
+tr:nth-child(2n){
+    background-color: #96a9b3;
+}
+td:nth-child(2){
+    width: 140px;
+}
+td:nth-child(3){
+    width: 120px;
+}
+td:nth-child(5){
+    width: 50px;
+}
+.record__body__block table{
+    width: 200%;
+}
+td{
+    padding: 5px;
+    font-size: 18px;
+    color: black;
+}
+
+.td__fio{
+    font-weight: 600;
+}
+
+.td__problems{
+    position: relative;
+    width: auto;
+}
+.btn__problems{
+    position: absolute;
+    background-color: #0166ae;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 10px;
+    right: 0;
+    bottom: 2px;
+}
+
+.btn__request{
+    background-color: #0166ae;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 10px;
+}
