@@ -18,6 +18,7 @@ session_start();
     <link rel="stylesheet" href="./stylecss/modalStyle.css">
     <link rel="stylesheet" href="./stylecss/modalRecord.css">
     <link rel="stylesheet" href="./stylecss/recordBody.css">
+    <link rel="stylesheet" href="./stylecss/adaptive.css">
     <title>ТелеМед</title>
 </head>
 <body>
@@ -50,7 +51,7 @@ session_start();
                 <div class="main__info">
                     <?php
                         require './php/connect.php';
-                        require './php/registration.php';
+                        // require './php/registration.php';
                         require './php/auth.php';
                         require './php/outputPost.php';
                     ?>
@@ -287,25 +288,25 @@ session_start();
             Регистрация
             <img src="./img/close.png" class="close__modal"></img>
         </div>
-        <form method="post" class="modal__form">
+        <form method="post" id="formreg"  onsubmit="return false" class="modal__form check__form">
             <div class="form__group">
-                <input name="fio" type="text" class="modal__input" placeholder="Ваше ФИО *"> 
+                <input name="fio" type="text" class="modal__input inp__fio" placeholder="Ваше ФИО *"> 
             </div>
             <div class="form__group">
                 <label for="tel">Телефон</label>
-                <input name="tel" type="tel" id="tel" class="modal__input modal__input__tel" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]" placeholder="Введите номер">
+                <input name="tel" type="tel" id="tel" class="modal__input modal__input__tel inp__phone" maxlength="11" placeholder="Введите номер">
             </div>
             <div class="form__group">
-                <input name="email" type="email" class="modal__input" placeholder="Ваш e-mail">
+                <input name="email" type="email" class="modal__input inp__email" minlength="13" placeholder="Ваш e-mail">
             </div>
             <div class="form__group">
-                <input name="snils" type="text" class="modal__input inp__snils" pattern="/[0-9]/" placeholder="Введите СНИЛС">
+                <input name="snils" type="text" class="modal__input inp__snils" maxlength="14" placeholder="Введите СНИЛС">
             </div>
             <div class="form__group">
-                <input name="pass" type="password" class="modal__input" placeholder="Введите пароль">
+                <input name="pass" type="password" class="modal__input inp__pass" placeholder="Введите пароль">
             </div>
             <div class="form__group">
-                <input name="pass2" type="password" class="modal__input" placeholder="Повторите пароль">
+                <input name="pass2" type="password" class="modal__input inp__passConf" placeholder="Повторите пароль">
             </div>
             <button class="modal__btn modal__btn__content" id="reg2" type="submit">Зарегистрироваться</button>
         </form>
@@ -453,8 +454,6 @@ session_start();
         // "today" => $_POST['today'],
         // "nowTime" => $_POST['nowTime'],
     ]; 
-    echo $data['idUs'];
-    echo $data['doc'];
     $idUs2 = $data['idUs'];
     $doc2 = $data['doc'];
     ?>

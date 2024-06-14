@@ -179,7 +179,7 @@
 
 .time__rec.active{
     color: white;
-    border-radius: 50%;
+    border-radius: 25px;
     background-color: #0166ae;
 }
 .day{

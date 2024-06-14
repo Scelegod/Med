@@ -1,0 +1,258 @@
+@media (min-width: 1440px) and (max-width: 1550px) {
+    .leftbar{
+        width: 17em;
+    }
+    .main{ 
+        margin-left: 17em;
+    }
+    .main__page{
+        gap: 1em;
+    }
+    .body__tabs.actived {
+        width: 80%;
+    }
+    .main_body{
+        width: 80%;
+    }
+    .page__doctors{
+        width: 750px;
+    }
+    .evCont__record__post{
+        font-size: 18px;
+    }
+    .modalRecord{
+        top: 10px;
+    }
+    .record__fulldata{
+        flex-direction: column;
+        font-size: 16px;
+    }
+    .evCont__record__post{
+        width: auto;
+    }
+    .modalChat {
+        top: 20px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .leftbar{
+        width: 13em;
+    }
+    .leftbar__title{
+        font-size: 24px;
+    }
+    .leftbar__menu__content__title{
+        font-size: 16px;
+    }
+    .leftbar__menu__content__img{
+        width: 1em;
+        height: 1em;
+    }
+    .body__tabs.actived {
+        padding: 1em 2em;
+    }
+    .main{
+        margin-left: 13em;
+    }
+    .main__page{
+        gap: 1em;
+    }
+    .page__doctors{
+        gap: 1em;
+    }
+    .body__content__note, .main__info__user__name, .main__info__user__snils, .post__box__title{
+        font-size: 14px;
+    }
+    .body__content__title{
+        font-size: 16px;
+    }
+    .rightbar{
+        display: none;
+    }
+    .selection__doctors__inp, .selection__med__inp, .selection__post__inp{
+        height: 2.4em;
+        font-size: 14px;
+    }
+    .doctors__name{
+        font-size: 16px;
+    }
+    .doctors__post{
+        font-size: 12px;
+    }
+    .doctors__med, .doctors__btn{
+        font-size: 14px;
+    }
+    .modalRecord{
+        position: absolute;
+        width: auto;
+        top: 15px;
+        left: calc(50% - 260px);
+    }
+    .modalRecord__content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .modalRecord__title, .modalRecord__note{
+        font-size: 16px;
+    }
+    .date-rec, .date-now, .time__rec{
+        font-size: 14px;
+    }
+    .doctor__description{
+        align-items: center;
+    }
+    .doctor__nameRec{
+        font-size: 16px;
+    }
+    .doctor__img{
+        width: 52px;
+        height: 52px;
+    }
+    .description__problems{
+        font-size: 16px;
+    }
+    .patient__title{
+        font-size: 16px;
+    }
+    .connections__title{
+        font-size: 16px;
+    }
+    .item__title{
+        font-size: 16px;
+    }
+    ._blank{
+        font-size: 16px;
+    }
+    .modalRecord__btn{
+        position: relative;
+    }
+    .record__fulldata{
+        flex-direction: column;
+        gap: 2px;
+    }
+    .evCont__record__post{
+        width: auto;
+    }
+    .page__block__title{
+        font-size: 18px;
+    }
+    .page__block__img{
+        width: 0.9em;
+        height: 0.9em;
+    }
+    .cabinet__body__title{
+        font-size: 18px;
+    }
+    .modalExit {
+        padding: 40px 50px;
+    }
+    .modalExit__title{
+        font-size: 20px;
+    }
+    .modalExit__btn{
+        font-size: 18px;
+    }
+    .tabs__future, .tabs__current, .tabs__close{
+        font-size: 18px;
+    }
+    .evCont__record__post{
+        font-size: 16px;
+    }
+
+    .evCont__record__data, .evCont__record__time{
+        font-size: 14px;
+    }
+    .record__contact{
+        font-size: 14px;
+    }
+
+    .future__block__note, .close__block__note,.current__block__note{
+        font-size: 16px;
+    }
+    .modalChat {
+        top: 10px;
+        width: 500px;
+        left: calc(50% - 240px);
+    }
+    .modalChat__note{
+        min-height: 400px;
+        max-height: 400px;
+    }
+    .modalChat__docName{
+        font-size: 16px;
+    }
+    .text{
+        font-size: 16px;
+    }
+    .modalChat__input{
+        font-size: 16px;
+    }
+    .doctor__name{
+        font-size: 18px;
+    }
+    .doctor__med__name{
+        font-size: 16px;
+    }
+    .doctors__img{
+        width: 6em;
+        height: 6em;
+    }
+    .slot{
+        font-size: 14px;
+    }
+    .tools__text{
+        font-size: 16px;
+    }
+    .post__title{
+        font-size: 16px;
+    }
+    .work__title{
+        font-size: 16px;
+    }
+
+    .window__body{
+        margin: 100px auto;
+    }
+    .post__name{
+        font-size: 16px;
+    }
+    .doctor__med{
+        font-size: 16px;
+    }
+    .doctor__med__adress{
+        font-size: 14px;
+    }
+    .doctor__city{
+        font-size: 14px;
+    }
+    .communication__phone{
+        width: 1.4em;
+        height: 1.2em;
+    }
+    .communication__chat{
+        width: 1.5em;
+        height: 1.5em;
+    }
+    .communication__camera {
+        width: 1.4em;
+        height: 1.2em;
+    }
+    
+    .post__img, .doctor__work__img{
+        width: 2em;
+        height: 2em;
+    }
+    .body__column {
+        height: 280px;
+    }
+    .column__left, .column__right{
+        width: auto;
+    }
+    .doctors__btn{
+        padding: 0.5em 1em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}

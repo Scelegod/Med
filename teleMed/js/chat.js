@@ -11,9 +11,10 @@ let year = date.getFullYear();
 
 function loadDoc() {
     let modalChatAct = document.querySelector('.modalChat.active');
-    // let sms = modalChatAct.querySelector('.modalChat__input').value;
+    let sms = modalChatAct.querySelector('.modalChat__input');
     let idUs = modalChatAct.querySelector('.idUs__input').value;
     let doc = modalChatAct.querySelector('.doc__input').value;
+
     $.ajax({
         type: "POST",
         url: './php/loadFindingAuth.php',
@@ -60,7 +61,6 @@ function send2(){
     let doc = modalChatAct.querySelector('.doc__input').value;
     let today = modalChatAct.querySelector('.today__input').value;
     let nowTime = modalChatAct.querySelector('.nowTime__input').value;
-    sms.value = "";
     let modalChat__note = document.querySelector('.modalChat.active .modalChat__note');
             
     $.ajax({
@@ -75,7 +75,9 @@ function send2(){
         }
     })
     .done(function( msg ) {
-      });
+        sms = "";
+
+    });
 }
 function send3(){
     let modalChatAct = document.querySelector('.modalChat.active');
@@ -84,7 +86,6 @@ function send3(){
     let doc = modalChatAct.querySelector('.doc__input').value;
     let today = modalChatAct.querySelector('.today__input').value;
     let nowTime = modalChatAct.querySelector('.nowTime__input').value;
-    sms.value = "";
     
     $.ajax({
         type: "POST",
@@ -98,7 +99,8 @@ function send3(){
         }
     })
     .done(function( msg ) {
-      });
+        sms = "";
+    });
 }
 
 let timer;
@@ -113,37 +115,34 @@ for(let i = 0; i< block__record__content.length; i++){
         substrate.classList.add('active');
         if(modalChat[i].classList.contains('active')){
             //   setInterval(refreshContent, 5000);
-            
+            timer = setInterval(function(){
+                loadDoc();
+                },1000);
             let modalChat__note = document.querySelector('.modalChat.active .modalChat__note');
             modalChat__note.scrollTo({
-                top: document.body.scrollHeight,
-                behavior: "smooth"
+            top: document.body.scrollHeight,
+            behavior: "smooth"
             });
-            timer = setInterval(function(){
-            // modalChat__note.scrollTo({
-            //     top: document.body.scrollHeight,
-            //     behavior: "smooth"
-            // });
-            // let message__time = document.querySelectorAll('.modalChat.active .modalChat__note .message__time');
-            // let arr = [];
-    
-            // for(let elem of message__time){
-            //     let dataArr = elem.dataset.times.split(/[: .]/);
-            //     // console.log(dataArr);
-            //     let milsec = new Date(+dataArr[5], +dataArr[4], +dataArr[3],+dataArr[0], +dataArr[1], +dataArr[2]);
-            //     arr.push(elem);
-            //     arr.sort((a,b) => new Date(a.dataset.times) - new Date(b.dataset.times));
-    
-            //     elem.setAttribute('data-times', milsec);
-            //     elem.remove();
-            // }
-            // for(let elem of arr.sort((a,b) => new Date(a.dataset.times) - new Date(b.dataset.times))){
-            //     modalChat__note.appendChild(elem);
-            // }
+                
+            let message__time = document.querySelectorAll('.modalChat.active .modalChat__note .message__time');
+            let arr = [];
+
+            for(let elem of message__time){
+                let dataArr = elem.dataset.times.split(/[: .]/);
+                // console.log(dataArr);
+                let milsec = new Date(+dataArr[5], +dataArr[4], +dataArr[3],+dataArr[0], +dataArr[1], +dataArr[2]);
+                arr.push(elem);
+                arr.sort((a,b) => new Date(a.dataset.times) - new Date(b.dataset.times));
+
+                elem.setAttribute('data-times', milsec);
+                elem.remove();
+            }
+            for(let elem of arr.sort((a,b) => new Date(a.dataset.times) - new Date(b.dataset.times))){
+                modalChat__note.appendChild(elem);
+            }
             
-            loadDoc();
+            
     
-            },1000);
 
             // let formData = new FormData(document.querySelector('.modalChat__note'));
             let close__modalChat = document.querySelector('.modalChat.active .close__modalChat');
@@ -186,35 +185,3 @@ window.addEventListener('click', function(e){
 });
 
 
-// let event__content__future = document.querySelector('.event__content__future ');
-// if(event__content__future.childNodes[1] == document.querySelector('.future__block')){
-
-// }else{
-//     document.querySelector('.future__block').style.display = "none";
-//     event__content__future.style.flexDirection = "column";
-//     event__content__future.style.alignItems = "normal";
-//     event__content__future.style.justifyContent = "normal";
-//     event__content__future.style.gap = "20px";
-// }
-
-// let event__content__close = document.querySelector('.event__content__close');
-// if(event__content__close.childNodes[1] == document.querySelector('.close__block')){
-    
-// }else{
-//     document.querySelector('.close__block').style.display = "none";
-//     event__content__close.style.flexDirection = "column";
-//     event__content__close.style.alignItems = "normal";
-//     event__content__close.style.justifyContent = "normal";
-//     event__content__close.style.gap = "20px";
-// }
-
-// let event__content__current = document.querySelector('.event__content__current');
-// if(event__content__current.childNodes[1] == document.querySelector('.current__block')){
-    
-// }else{
-//     document.querySelector('.current__block').style.display = "none";
-//     event__content__current.style.flexDirection = "column";
-//     event__content__current.style.alignItems = "normal";
-//     event__content__current.style.justifyContent = "normal";
-//     event__content__current.style.gap = "20px";
-// }

@@ -32,9 +32,12 @@ window.addEventListener('click', function(e){
     }
     
     if(e.target.closest('.cabinet__content__li.exit')){
-        // console.log('exit');
-        substrate.classList.add('active');
-        modalExit.classList.add('active');
+        if(document.querySelector('.main__info').childElementCount != 1){
+            substrate.classList.add('active');
+            modalExit.classList.add('active');
+        }else{
+
+        }
     }
 
     if(e.target.closest('.modalExit__btn.modalExit__btn__content')){
