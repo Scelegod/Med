@@ -41,6 +41,7 @@ session_start();
                 <!-- https://www.flaticon.com/free-icon/option_4626734 -->
             </div>
             <?php
+            require './php/connect.php';
             require './php/leftBar.php';
             ?>
         </div>
@@ -50,7 +51,6 @@ session_start();
             <div class="main__page">
                 <div class="main__info">
                     <?php
-                        require './php/connect.php';
                         // require './php/registration.php';
                         require './php/auth.php';
                         require './php/outputPost.php';
@@ -447,15 +447,6 @@ session_start();
 
     <?php
      require './php/chat.php';
-     $data = [
-        'idUs' => $_POST['idUs'],
-        'doc' => $_POST['doc'],
-        // "sms" => $_POST['sms'],
-        // "today" => $_POST['today'],
-        // "nowTime" => $_POST['nowTime'],
-    ]; 
-    $idUs2 = $data['idUs'];
-    $doc2 = $data['doc'];
     ?>
     <!-- <script src="./js/doctest.js"></script> -->
     <!-- <script src="./js/pageTabs.js"></script> -->

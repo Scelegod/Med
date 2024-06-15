@@ -32,7 +32,7 @@ if (!empty($_POST['password']) and !empty($_POST['tel2'])) {
                     "post" => $user['PostValue'],
                     "medId" => $user['MedId'],
                     "medName" => $user['MedName'],
-                    "email" => $user['email'],
+                    // "email" => $user['email'],
                 ];
             } 
         }
