@@ -138,6 +138,14 @@
     cursor: pointer;
 }
 
+.doctors__btn2{
+    background-color: #1467c9;
+    border-radius: 10px;
+    padding: 0.5em 2em;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
 
 
 option.med__option{

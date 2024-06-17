@@ -35,7 +35,7 @@
     }
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
     .leftbar{
         width: 13em;
     }
@@ -95,6 +95,10 @@
     }
     .modalRecord__title, .modalRecord__note{
         font-size: 16px;
+        margin: 0;
+    }
+    .modalRecord__content__row.right{
+        gap: 10px;
     }
     .date-rec, .date-now, .time__rec{
         font-size: 14px;
@@ -104,13 +108,24 @@
     }
     .doctor__nameRec{
         font-size: 16px;
+        margin: 0;
+    }
+    .doctor__post__text{
+        margin: 0;
+    }
+    .description__problems__textarea{
+        padding: 5px 0px;
+    }
+    .connections__types__item {
+        padding: 5px 10px;
     }
     .doctor__img{
-        width: 52px;
-        height: 52px;
+        width: 40px;
+        height: 40px;
     }
     .description__problems{
         font-size: 16px;
+        margin: 0;
     }
     .patient__title{
         font-size: 16px;
@@ -122,10 +137,12 @@
         font-size: 16px;
     }
     ._blank{
-        font-size: 16px;
+        font-size: 14px;
     }
     .modalRecord__btn{
         position: relative;
+        font-size: 14px;
+        height: 30px;
     }
     .record__fulldata{
         flex-direction: column;
@@ -254,5 +271,264 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media  (max-width: 1024px) {
+    td{
+        font-size: 16px;
+    }
+    .window__body{
+        width: 600px;
+        padding: 20px;
+    }
+    .window__close{
+        left: 540px;
+    }
+    .body__column {
+        justify-content: space-evenly;
+    }
+    .doctor__name{
+        font-size: 16px;
+    }
+    .doctor__med, .doctor__med__name, .post__name, .post__time, .post__title, .work__title, .doctor__med{
+        font-size: 14px;
+    }
+    .doctor__city, .doctor__med__adress{
+        font-size: 12px;
+    }
+    .doctors__img{
+        width: 4em;
+        height: 4em;
+    }
+    .doctors__btn2{
+        padding: 0.1em 0.6em;
+        font-size: 12px;
+    }
+    .slot{
+        font-size: 10px;
+    }
+
+    .post__img, .doctor__work__img{
+        width: 1.5em;
+        height: 1.5em;
+    }
+    .tools__text{
+        font-size: 12px;
+        margin-right: 0;
+    }
+    .communication__phone, .communication__camera{
+        width: 1.2em;
+        height: 1em;
+    }
+    .communication__chat{
+        width: 1.2em;
+        height: 1.2em;
+    }
+    .modalExit__title{
+        font-size: 18px;
+    }
+    .modalCancelRec__title, .modalCancelRec__btn {
+        font-size: 18px;
+    }
+    .modalChat__btn{
+        height: 58px;
+    }
+    .main__info__user__btn{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    td{
+        font-size: 14px;
+    }
+    .modal, .modalreg{
+        width: 530px;
+        left: calc(50% - 265px);
+        padding: 40px 60px;
+        top: 10%;
+    }
+    .close__modal{
+        right: -30px;
+    }
+    .modal__input {
+        padding: 13px 0 12px 21px;
+        font-size: 14px;
+    }
+    .modal__btn{
+        padding: 10px 40px;
+    }
+    
+}
+
+@media (max-width: 525px) {
+    td{
+        font-size: 12px;
+    }
+    .doctors__block{
+        flex-direction: column;
+    }
+    .doctors__name{
+        font-size: 14px;
+    }
+    .window__body{
+        margin: 50px auto;
+    }
+    .doctors__med{
+        font-size: 12px;
+    }
+    .window__body{
+        width: 320px;
+    }
+    .body__column{
+        flex-direction: column-reverse;
+        height: 420px;
+    }
+    .doctor__name{
+        font-size: 14px;
+    }
+    .doctor__med__name{
+        font-size: 12px;
+    }
+    .post__time{
+        padding: 0.2em;
+        font-size: 12px;
+    }
+    .window__close{
+        left: 280px;
+        font-size: 14px;
+    }
+    .block__record__content__future, .block__record__content, .block__record__content__close{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .text{
+        font-size: 12px;
+    }
+    .modalChat__docName{
+        font-size: 14px;
+        padding: 0;
+    }
+    .modalChat__img{
+        width: 30px;
+        height: 30px;
+    }
+    .modalChat__who{
+        height: 40px;
+    }
+    .modalChat__input{
+        font-size: 12px;
+    }
+    .modalChat__btn{
+        height: 52px;
+    }
+    .modalChat__btn__img{
+        height: 22px;
+    }
+    .message2 .figure, .message .figure{
+        height: 10px;
+    }
+    .li__box__title{
+        font-size: 12px;
+    }
+    .li_box__img{
+        width: 1.5em;
+        height: 1.5em;
+    }
+    .modalChat{
+        padding: 1px;
+        width: 320px;
+        left: calc(50% - 160px);
+    }
+    .modalExit, .modalCancelRec {
+        width: 320px;
+        left: calc(50% - 160px);
+        padding: 10px 40px;
+    }
+    .modalRecord {
+        width: 320px;
+        left: calc(50% - 160px);
+        padding: 10px;
+    }
+    .doctors__btn{
+        font-size: 12px;
+    }
+    .modalRecord__title, .modalRecord__note,.modalRecord__note,.patient__title,.connections__title, .item__title,.add-file, .doctor__nameRec {
+        font-size: 14px;
+    }
+    .description__problems{
+        font-size: 14px;
+    }
+    .item__title.active{
+        font-size: 16px;
+    }
+    ._blank{
+        font-size: 10px;
+    }
+    .date-now, .date-rec{
+        font-size: 12px;
+    }
+    #days li{
+        /* height: 30px; */
+        width: 26px;
+    }
+    .modalRecord__content__row.right{
+        gap: 5px;
+    }
+    .description__problems__textarea{
+        height: 50px;
+    }
+    .main__body {
+        height: 10em;
+    }
+    .check__title a{
+        font-size: 12px;
+    }
+    .modalRecord__content{
+        gap: 5px;
+    }
+    .connections{
+        gap: 10px;
+    }
+    .patient__snils,.doctor__med__text{
+        font-size: 12px;
+    }
+    .modalCancelRec__title, .modalExit__title{
+        line-height: 14px;
+    }
+    .modalExit__btn,.modalCancelRec__btn  {
+        padding: 7px 20px;
+    }
+    .modalExit__title, .modalExit__btn, .modalCancelRec__title, .modalCancelRec__btn{
+        font-size: 14px;
+    }
+    .record__contact{
+        align-self: flex-end;
+    }
+    .column__right{
+        gap: 5px;
+    }
+    .doctor__med__span,.post__name,.body__content__note, .work__title, .post__title{
+        font-size: 12px;
+    }
+    .modal__form{
+        align-items: center;
+    }
+    .modal, .modalreg{
+        width: 320px;
+        left: calc(45% - 140px);
+        padding: 40px 30px;
+    }
+    .modalreg{
+        top: 5%;
+        padding: 10px 50px;
+    }
+    .modal__btn{
+        width: 200px;
+        padding: 10px 20px;
+    }
+    .substrate{
+        width: 100%;
+    }
+    .close__modal{
+        right: -10px;
+    }
 }

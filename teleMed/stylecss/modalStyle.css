@@ -261,30 +261,3 @@
 }
 /* ----------------------------------------------- */
 
-@media (max-width: 768px) {
-    .modal, .modalreg{
-        width: 530px;
-    }
-}
-
-@media (max-width: 425px) {
-    .modal, .modalreg{
-        width: 300px;
-        left: calc(45% - 180px);
-        padding: 30px 50px;
-    }
-    .modalreg{
-        top: 5%;
-        padding: 10px 50px;
-    }
-    .modal__btn{
-        width: 200px;
-        padding: 20px 20px;
-    }
-    .substrate{
-        width: 100%;
-    }
-    .close__modal{
-        right: -30px;
-    }
-}

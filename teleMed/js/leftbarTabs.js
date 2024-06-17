@@ -13,3 +13,4 @@ for (let i = 0; i < links2.length; i++) {
     this.classList.add('active__tabik');
   });
 }
+

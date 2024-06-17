@@ -231,9 +231,9 @@
 .description__problems{
     display: block;
     font-weight: 600;
-    font-size: 18px !important;
-    line-height: 20px !important;
-    margin-bottom: 8px !important;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 8px;
 }
 
 .description__problems__textarea{
@@ -602,7 +602,10 @@
     /* background-color: #0166ae00; */
     border-radius: 0 5px 0 0;
 }
-
+.modalChat__btn__img{
+    height: 32;
+    z-index: 1;
+}
 .dispnone{
     display: none;
 }

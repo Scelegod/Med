@@ -44,7 +44,7 @@ if (isset($_SESSION['auth'])) {
                                     echo ' <input name="today" type="text" class="dispnone today__input" value="'.$today.'">';
                                     echo ' <input name="nowTime" type="text" class="dispnone nowTime__input" value="'.$nowTime.'">';
                                     echo ' <button name="tosms" type="button" onclick="send2()" class="modalChat__btn">';
-                                        echo '<img src="./img/send.png" style="height: 32px; z-index: 1;" alt="">';
+                                        echo '<img src="./img/send.png" class="modalChat__btn__img" alt="">';
                                     echo '</button>';
                                 echo '</div>';
                             echo'</form>';

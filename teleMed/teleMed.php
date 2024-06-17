@@ -22,6 +22,11 @@ session_start();
     <title>ТелеМед</title>
 </head>
 <body>
+    <div class="btn__leftbar">
+        <div class="btn__leftbar__line"></div>
+        <div class="btn__leftbar__line"></div>
+        <div class="btn__leftbar__line"></div>
+    </div>
     <div class="leftbar">
         <div class="leftbar__title"><div class="header__content__title__color">Теле</div>Медецина</div>
         <div class="leftbar__menu">
@@ -115,7 +120,7 @@ session_start();
                             <div class="body__column">
                                 <div class="column__left">
                                     <img src="./img/cabinet.png" alt="img" class="doctors__img">
-                                    <div class="doctors__btn">Записаться онлайн</div>
+                                    <div class="doctors__btn2">Записаться онлайн</div>
                                     <div class="slot">Может принять сегодня</div>
                                     <div class="tools">
                                         <div class="tools__text">Средства связи</div>
